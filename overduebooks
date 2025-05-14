@@ -1,0 +1,5 @@
+SELECT m.Name, b.Title, l.DueDate
+FROM Loans l
+JOIN Members m ON l.MemberID = m.MemberID
+JOIN Books b ON l.BookID = b.BookID
+WHERE l.ReturnDate IS NULL AND l.DueDate < CURDATE();
