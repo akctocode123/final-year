@@ -1,0 +1,11 @@
+-- Add a member
+INSERT INTO Members (Name, Email, Phone, JoinDate)
+VALUES ('Alice Johnson', 'alice@example.com', '9876543210', CURDATE());
+
+-- Add a book
+INSERT INTO Books (Title, Author, ISBN, Publisher, Year, CopiesAvailable)
+VALUES ('1984', 'George Orwell', '9780451524935', 'Signet Classics', 1949, 5);
+
+-- Add a loan
+INSERT INTO Loans (BookID, MemberID, StaffID, LoanDate, DueDate)
+VALUES (1, 1, 1, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 14 DAY));
